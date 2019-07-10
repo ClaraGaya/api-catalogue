@@ -14,17 +14,8 @@ export const getApis = () => {
         .then(res =>  res.json() )
         .then(json => { dispatch(getApisSuccess(json)); })
         .catch(err => { dispatch(getApisError(err)); });
-
-        // dispatch(getApisRequest());
-        // fetch('/data/apisData.json')
-        // .then(res =>  res.json() )
-        // .then(json => { console.log('apisData', json);})
-        // .then(json => { dispatch(getApisSuccess(json.apis)); })
-        // .catch(err => { dispatch(getApisError(err)); });
     }
 }
-
-
 
 // Actions
 export const getApisRequest = () =>  ({

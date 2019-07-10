@@ -8,12 +8,31 @@ import ApiCard from './ApiCard';
 
 
 class ApiList extends React.Component { 
+    constructor(props) {
+        super(props);
+        this.state = {
+            sortChoice: null
+        }
+    }
     componentWillMount() {
         this.props.fetchApis();
     }
+
+    handleChange = sortChoice => {
+        this.setState({ sortChoice });
+        console.log(`Sorting Choice:`, sortChoice);
+    };
    
     render() { 
         const { apis } = this.props;
+        const { sortChoice } = this.state;
+
+        if(sortChoice) {
+            sortChoice === 'ASC'
+            ? apis.sort((a, b) => (a.title[0] > b.title[0]) ? 1 : -1 )
+            : apis.sort((a, b) => (a.title[0] < b.title[0]) ? 1 : -1 );
+        }
+
         return (
             <div className='apis-list section'>
                 {
