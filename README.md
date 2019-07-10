@@ -1,5 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## API Catalogue Code Test Brief
+
+The brief is to create a simple API Catalogue that can be sorted in alphabetical order (ascending/descending). It must be built responsively and in a way where it could be reused in multiple places.  The choice of framework/library or pure JS is up to you, but it should work within the latest version of Chrome.
+
+Screenshots of the design are attached.
+
+The three APIs should be titled following:
+- Branch Details
+- Product Details
+- ATM Locator
+
 ## Available Scripts
 
 In the project directory, you can run:
